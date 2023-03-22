@@ -10,6 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.1.4"
+    "@astrojs/solid-js": "^2.1.0",
+    "astro": "^2.1.4",
+    "sass": "^1.59.3",
+    "solid-js": "^1.4.3"
+  },
+  "devDependencies": {
+    "type-fest": "^3.6.1"
   }
 }

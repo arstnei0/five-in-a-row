@@ -1,0 +1,34 @@
+.row
+    display: flex
+
+.grid
+    width: var(--grid-size)
+    height: var(--grid-size)
+    background-color: var(--grid-background)
+    border: solid 1px var(--grid-border)
+    border-radius: 5px
+    position: relative
+
+    &:hover
+        background-color: var(--grid-background-hover)
+
+    &[data-status="black"], &[data-status="white"]
+        &::before
+            content: " "
+            position: absolute
+            top: calc(50% - var(--piece-size) / 2)
+            left: calc(50% - var(--piece-size) / 2)
+            width: var(--piece-size)
+            height: var(--piece-size)
+            background-color: var(--grid-color)
+            border-radius: 100%
+            box-shadow: 0 0 5px 3px var(--grid-color)
+
+    &[data-status="black"]
+        --grid-color: var(--grid-black)
+
+    &[data-status="white"]
+        --grid-color: var(--grid-white)
+
+    &[data-status="none"]
+        cursor: pointer
